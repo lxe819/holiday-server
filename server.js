@@ -9,8 +9,9 @@ app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
   res.send({ msg: "Holidays" });
+  // res.send("Holidays"); --> this is NOT .json
 });
 
 app.listen(PORT, () => {
-  log(`Express listing on ${PORT}`);
+  console.log(`Express listing on ${PORT}`);
 });
